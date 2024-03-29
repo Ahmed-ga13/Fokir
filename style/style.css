@@ -1,0 +1,757 @@
+html {
+  scroll-behavior: smooth;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: aliceblue;
+}
+.section {
+  margin-top: 20px; /* قد تحتاج لتعديل هذا الرقم حسب احتياجاتك */
+}
+/* Home Section */
+.home {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/slider-01.jpg");
+  background-size: cover;
+  /* background-attachment: fixed; */
+  color: white;
+  padding-top: 100px; /* تحديد المسافة بين الـ nav والمحتوى */
+}
+nav {
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+  position: fixed; /* جعل الـ nav ثابتًا */
+  top: 0; /* وضعه في أعلى الصفحة */
+  width: 100%; /* جعل الـ nav يمتد لتغطية العرض بالكامل */
+  background-color: rgba(0, 0, 0, 0.7); /* جعل الخلفية شفافة */
+  padding: 10px 0; /* إضافة بعض التباعد للأعلى والأسفل */
+  z-index: 1000; /* تحديد ترتيب العناصر لضمان ظهور الـ nav فوق العناصر الأخرى */
+  transition: background-color 0.5s; /* تأثير تدريجي لتغيير لون الخلفية */
+}
+nav ul li {
+  list-style: none;
+  width: 20%;
+  display: inline-block;
+  margin-left: -50px;
+  text-align: center;
+}
+nav ul li:hover a {
+  color: #ff305b; /* تغيير لون الخط عند التحويل */
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0 0 0 /60%);
+}
+nav a {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  margin-left: 20px;
+}
+.navLogo {
+  display: inline-block;
+  width: 30%;
+  color: white;
+  font-size: 25px;
+  font-style: italic;
+  right: -40px;
+  position: relative;
+}
+.navLogo:hover {
+  color: #ff305b;
+}
+.nav-items {
+  display: inline-block;
+  width: 50%;
+  margin-left: 200px;
+  font-size: 20px;
+}
+nav.scrolled {
+  background-color: rgba(0, 0, 0, 0.9); /* يمكنك تعديل شفافية اللون هنا */
+}
+.home-content {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  margin-top: 225px;
+}
+.home-content p {
+  font-size: 36px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+.home-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: #ff305b;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+@keyframes typeEffect {
+  0% {
+    content: "";
+  }
+  1% {
+    content: "P|";
+  }
+  2% {
+    content: "Pr|";
+  }
+  3% {
+    content: "Pro|";
+  }
+  4% {
+    content: "Prof|";
+  }
+  5% {
+    content: "Profe|";
+  }
+  6% {
+    content: "Profes|";
+  }
+  7% {
+    content: "Profess|";
+  }
+  8% {
+    content: "Professi|";
+  }
+  9% {
+    content: "Professio|";
+  }
+  10% {
+    content: "Professiona|";
+  }
+  11% {
+    content: "Professional|";
+  }
+  12% {
+    content: "Professional |";
+  }
+  13% {
+    content: "Professional W|";
+  }
+  14% {
+    content: "Professional We|";
+  }
+  15% {
+    content: "Professional Web|";
+  }
+  16% {
+    content: "Professional Web |";
+  }
+  17% {
+    content: "Professional Web D|";
+  }
+  18% {
+    content: "Professional Web De|";
+  }
+  19% {
+    content: "Professional Web Dev|";
+  }
+  20% {
+    content: "Professional Web Deve|";
+  }
+  21% {
+    content: "Professional Web Devel|";
+  }
+  22% {
+    content: "Professional Web Develo|";
+  }
+  23% {
+    content: "Professional Web Develop|";
+  }
+  24% {
+    content: "Professional Web Deveplope|";
+  }
+  25% {
+    content: "Professional Web Deveploper|";
+  }
+  26% {
+    content: "Professional Web Deveplope|";
+  }
+  27% {
+    content: "Professional Web Deveplop|";
+  }
+  28% {
+    content: "Professional Web Deveplo|";
+  }
+  29% {
+    content: "Professional Web Devepl|";
+  }
+  30% {
+    content: "Professional Web Devep|";
+  }
+  31% {
+    content: "Professional Web Deve|";
+  }
+  32% {
+    content: "Professional Web Dev|";
+  }
+  33% {
+    content: "Professional Web De|";
+  }
+  34% {
+    content: "Professional Web Des|";
+  }
+  35% {
+    content: "Professional Web Desi|";
+  }
+  36% {
+    content: "Professional Web Desig|";
+  }
+  37% {
+    content: "Professional Web Design|";
+  }
+  38% {
+    content: "Professional Web Designe|";
+  }
+  39% {
+    content: "Professional Web Designer|";
+  }
+  40% {
+    content: "Professional Web Designe|";
+  }
+  41% {
+    content: "Professional Web Design|";
+  }
+  42% {
+    content: "Professional Web Desig|";
+  }
+  43% {
+    content: "Professional Web Desi|";
+  }
+  44% {
+    content: "Professional Web Des|";
+  }
+  45% {
+    content: "Professional Web De|";
+  }
+  46% {
+    content: "Professional Web D|";
+  }
+  47% {
+    content: "Professional Web|";
+  }
+  48% {
+    content: "Professional We|";
+  }
+  49% {
+    content: "Professional W|";
+  }
+  50% {
+    content: "Professional|";
+  }
+  51% {
+    content: "Professiona|";
+  }
+  52% {
+    content: "Profession|";
+  }
+  53% {
+    content: "Professio|";
+  }
+  54% {
+    content: "Professi|";
+  }
+  55% {
+    content: "Profess|";
+  }
+  56% {
+    content: "Profes|";
+  }
+  57% {
+    content: "Profe|";
+  }
+  58% {
+    content: "Prof|";
+  }
+  59% {
+    content: "Pro|";
+  }
+  60% {
+    content: "Pr|";
+  }
+  61% {
+    content: "P|";
+  }
+  62% {
+    content: "";
+  }
+}
+
+h1::after {
+  content: "";
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typeEffect 10s steps(25, end) infinite;
+  margin-top: 25px;
+  color: white;
+  font-size: 22px;
+  text-transform: none;
+}
+
+/* About Section */
+
+.continar {
+  display: flex;
+  position: relative;
+}
+.im {
+  width: 100%;
+  
+  
+}
+
+.image {
+  width: 25%;
+  margin: 40px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border: 5px solid black;
+  margin-left: 180px;
+}
+.image .overlay {
+    position: absolute;
+    top: 100%; /* Initially hidden below the image */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black overlay */
+    transition: top 0.3s ease; /* Transition for smooth movement */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  }
+
+  .image:hover .overlay {
+    top: 0; /* Moves overlay up to show on hover */
+  }
+
+  .image .overlay-icons {
+    color: white;
+    font-size: 24px;
+  }
+
+  .image .overlay-icons i {
+    margin: 0 5px;
+  }
+.contant {
+  width: 50%;
+  /* padding-left: 250px; */
+  margin-top: 50px;
+  border-bottom: 1px dotted black;
+  height: fit-content;
+  padding-bottom: 20px;
+  position: relative;
+  margin-top: 25px;
+}
+.contant h2:first-of-type::before {
+  content: "|";
+  color: #ff305b;
+  font-size: 30px;
+  font-weight: bolder;
+  
+}
+.contant h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.contant p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.row {
+  list-style: none;
+  display: flex;
+}
+.data {
+  margin-right: 50%;
+  width: 50%;
+  height: fit-content;
+  position: absolute;
+  margin-left: 40%;
+  margin-top: 260px;
+}
+
+.col li {
+  margin: 15px;
+}
+.coll {
+  margin-left: 20%;
+}
+.coll li {
+  margin: 15px;
+  color: black;
+}
+.coll li a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.664);
+}
+.clic {
+  margin: 20px;
+}
+.cv {
+  margin: 10px;
+  height: 40px;
+  width: 115px;
+  color: white;
+  background-color: #ff305b;
+  border-radius: 5px;
+  border: 1px solid white;
+  font-size: 15px;
+}
+.hire {
+  margin: 10px;
+  height: 40px;
+  width: 115px;
+  color: white;
+  background-color: #ff305b;
+  border-radius: 5px;
+  border: 1px solid white;
+  font-size: 15px;
+}
+/* Services */
+.services {
+  width: 100%;
+  height: 60vh;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(235, 235, 235);
+}
+
+.services .services-content {
+  width: 90%;
+  height: 56%;
+  margin-left: 5%;
+  margin-top: 15px;
+  position: absolute;
+  /* background-color: teal; */
+}
+
+.services-head {
+  text-align: center;
+  font-size: 30px;
+  color: rgb(14, 13, 13);
+}
+
+.cards {
+  background-color: rgb(235, 235, 235);
+  width: 20%;
+  height: 35vh;
+  margin-left: 50px;
+  margin-top: 40px;
+  display: inline-block;
+  text-align: center;
+  transition: all 1s;
+
+
+
+}
+.cards i{
+  color: #ff305b;
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+.cardimg {
+  transform: scale(0.18);
+  margin-top: -90px;
+  margin-bottom: -120px;
+  text-align: center;
+  transition: all 1s;
+
+
+}
+
+.card-head {
+  margin-bottom: 20px;
+
+}
+
+.cards:hover {
+  .cardimg {
+    transform: scale(0.22);
+  }
+
+  background-color: white;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+/* portfolio */
+.portfolio {
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+.portfolio .portflio-content {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 15px;
+  position: absolute;
+  
+}
+
+.portfolio-head {
+  text-align: center;
+  font-size: 30px;
+  color: rgb(14, 13, 13);
+  margin-top: 20px;
+}
+.imgs{
+  width: 95%;
+  height: fit-content;
+  top: 50%;
+  left: 50%;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  
+  
+
+}
+.cardz{
+  margin-left: 50px;
+  width: 430px;
+  height: 320px;
+  margin-top: 20px;
+  margin-right: -30px;
+  
+}
+.cardz {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.cardz:hover {
+  transform: scale(1.1);
+  filter: brightness(80%) grayscale(10%) opacity(0.8);
+}
+
+
+/* bar */
+.bar{
+background-color: rgb(235, 235, 235);
+width: 100%;
+height: 40vh;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+.bar-cards{
+  background-color: rgb(235, 235, 235);
+  width: 20%;
+  height: 30vh;
+  margin-left: 50px;
+  margin-top: 40px;
+  display: inline-block;
+  text-align: center;
+  transition: all 1s;
+}
+.bar-cards:hover {
+  .cardimg {
+    transform: scale(0.22);
+  }
+
+  background-color: white;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+/* blog */
+
+.blog{
+  background-color:rgb(235, 235, 235) ;
+  margin-top: 200px;
+  width: 100%;
+  height: 90vh;
+}
+
+.blog-head {
+  text-align: center;
+  font-size: 30px;
+  color: rgb(14, 13, 13);
+
+
+}
+.blog-content{
+  width: 100%;
+  height: 80%;
+  top: 50%;
+  margin-top: 30px;
+}
+
+
+.blog-card{
+  margin-left: 120px;
+  width: calc(80%/3);
+  height: 440px;
+  background-color: white;
+  margin-top: 50px;
+  position: absolute;
+  border-radius: 2%;
+
+  float: left;
+}
+
+.blog-img{
+  width: 100%;
+  border-top-left-radius: 2% ;
+  border-top-right-radius: 2% ;
+  height: 50%;
+}
+.bcard-content{
+  width: 100%;
+  height: 50%;
+  margin-left: 10px;
+  text-align: left;
+}
+.card-h4{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  transition: all 0.5s;
+}
+.card-h2{
+  margin-bottom: 20px;
+  transition: all 0.5s;
+}
+.card-p{
+  margin-bottom: 20px;
+  
+}
+.card-h2:hover{
+  color: #ff305b;
+
+}
+.card-h4:hover{
+  color: #ff305b;
+
+}
+
+.blog-card2{
+  margin-left: 550px;
+  width: calc(80%/3);
+  height: 440px;
+  background-color: white;
+  margin-top: 50px;
+  position: absolute;
+  border-radius: 2%;
+
+  float: left;
+}
+.blog-card3{
+  margin-left: 980px;
+  width: calc(80%/3);
+  height: 440px;
+  background-color: white;
+  margin-top: 50px;
+  position: absolute;
+  border-radius: 2%;
+
+  float: left;
+}
+
+/* contact */
+
+.contact{
+  margin-top: 20px;
+  width: 100%;
+  height: 80vh;
+}
+.contact-head{
+  text-align: center;
+  font-size: 30px;
+  color: rgb(14, 13, 13);
+  margin-top: 30px;
+}
+.contact-content{
+  width: 80%;
+  height: 80%;
+  margin-left: 165px;
+  margin-top: 20px;
+}
+.contact-table{
+  text-align: center;
+  float: left;
+  margin-top: 50px;
+  margin-left: 130px;
+  width: 70%;
+  height: 50%;
+  overflow: hidden;
+}
+.text{
+  display: inline-block;
+  width: 100%;
+  height: 35px;
+  border-radius: 1%;
+  border: #4e4e4e solid 0.1px;
+  
+  
+}
+.email{
+  display: inline-block;
+  width: 95%;
+  height: 35px;
+  border: #4e4e4e solid 0.1px;
+  margin-left: 27px;
+  border-radius: 1%;
+  
+}
+.subject{
+width: 100%;
+height: 35px;
+border: #4e4e4e solid 0.1px;
+  border-radius: 1%;
+  margin-top: 25px;
+}
+textarea{
+margin-top: 25px;
+border: #4e4e4e solid 0.1px;
+border-radius: 1%;
+}
+
+
+
+.send {
+  background-color: #ff305b;
+  color: white;
+  width: 120px;
+  height: 40px;
+  border-radius: 5%;
+  box-shadow: #ff305b 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border: none;
+  float: left;
+  transition: all 1s;
+  margin-left: 130px;
+  margin-top: 20px;
+}
+.send:hover {
+  background-color: #b8092c;
+}
+.end-nav{
+  background-color: #333;
+  width: 100%;
+  height: 25vh;
+}
+.endnav-content{
+width: 25%;
+height: 80%;
+margin-left: 40%;
+float: left;
+
+}
+.endtxt{
+  margin-top: 20%;
+  color: white;
+}
+
